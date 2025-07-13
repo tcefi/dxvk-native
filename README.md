@@ -1,3 +1,5 @@
+# Note: This fork is used for inner purposes. macOS and FreeBSD ports are in TODO currently.
+
 # DXVK Native
 
 DXVK Native is a port of [DXVK](https://github.com/doitsujin/dxvk) to Linux which allows it to be used natively without Wine.
