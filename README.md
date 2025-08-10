@@ -66,18 +66,6 @@ With Steam Runtime:
 
 This will create a folder dxvk-native-master in /your/target/directory which will contain a the libraries and tests.
 
-**macOS** <br>
-Firstly install SDL2, glslang and MoltenVK (or include dirs with include/ and libs/ where they're located:
-```sh
-port install libsdl2
-port install moltenvk
-port install glslang
-```
-Then cd to dxvk-native repo go build it
-```sh
-meson setup build # 'build' is a build directory
-```
-
 In order to preserve the build directories and symbols for development, pass `--dev-build` to the script.
 
 ### HUD
