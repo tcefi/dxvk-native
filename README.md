@@ -1,4 +1,4 @@
-# Note: This fork is used for inner purposes. macOS and FreeBSD ports are in TODO currently.
+# Note: FreeBSD is currently in TODO
 
 # DXVK Native
 
@@ -51,7 +51,7 @@ for 64-bit:
 `docker run -e USER=$USER -e USERID=$UID -it --rm -v $(pwd):/dxvk-native registry.gitlab.steamos.cloud/steamrt/scout/sdk /bin/bash`
 
 ### Building the library
-
+**Linux**
 Inside the DXVK directory, run either:
 
 On your host machine:
@@ -65,6 +65,18 @@ With Steam Runtime:
 ```
 
 This will create a folder dxvk-native-master in /your/target/directory which will contain a the libraries and tests.
+
+**macOS**
+Firstly install SDL2, glslang and MoltenVK (or include dirs with include/ and libs/ where they're located:
+```sh
+port install libsdl2
+port install moltenvk
+port install glslang
+```
+Then cd to dxvk-native repo go build it
+```sh
+meson setup build # 'build' is a build directory
+```
 
 In order to preserve the build directories and symbols for development, pass `--dev-build` to the script.
 
