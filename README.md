@@ -50,8 +50,8 @@ for 32-bit:
 for 64-bit:
 `docker run -e USER=$USER -e USERID=$UID -it --rm -v $(pwd):/dxvk-native registry.gitlab.steamos.cloud/steamrt/scout/sdk /bin/bash`
 
-### Building the library
-**Linux**
+### Building the library 
+**Linux** <br>
 Inside the DXVK directory, run either:
 
 On your host machine:
@@ -66,7 +66,7 @@ With Steam Runtime:
 
 This will create a folder dxvk-native-master in /your/target/directory which will contain a the libraries and tests.
 
-**macOS**
+**macOS** <br>
 Firstly install SDL2, glslang and MoltenVK (or include dirs with include/ and libs/ where they're located:
 ```sh
 port install libsdl2
