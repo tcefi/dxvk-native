@@ -37,6 +37,8 @@ if dxvk_platform == 'windows'
   util_src += util_src_win32
 elif dxvk_platform == 'linux'
   util_src += util_src_linux
+elif dxvk_platform == 'darwin'
+  util_src += util_src_linux
 else
   error('Unknown platform for util')
 endif

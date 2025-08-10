@@ -138,6 +138,12 @@ else
     lib_vulkan  = dxvk_compiler.find_library('vulkan-1', dirs : dxvk_library_path)
     lib_sdl2    = dxvk_compiler.find_library('SDL2',     dirs : dxvk_library_path)
     wrc = find_program('rc')
+  elif dxvk_platform == 'darwin'
+    dxvk_include_path = include_directories('./include', './include/native/', './include/native/windows', './include/native/directx', '/opt/local/include')
+    lib_vulkan  = dxvk_compiler.find_library('MoltenVK', dirs : '/opt/local/lib/')
+    lib_sdl2    = dxvk_compiler.find_library('SDL2', dirs : '/opt/local/lib')
+    wrc = find_program('echo')
+    so_prefix = 'libdxvk_'
   else
     dxvk_include_path = include_directories('./include', './include/native/', './include/native/windows', './include/native/directx')
     lib_vulkan  = dxvk_compiler.find_library('vulkan')
